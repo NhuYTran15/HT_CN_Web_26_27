@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 1</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        #khung{
+            width: 1000px;
+            height: 800px;
+            background-color: white;
+            border: 1px solid rgb(236, 139, 139);
+        }
+        header{
+            width: 100%;
+            height: 70px;
+            background-color: white;;
+            text-align: center;
+            padding: 20px;
+            
+        }
+        header i{
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 9px 7px 1px rgb(236, 147, 147); /* bóng chữ */
+            color: rgb(140, 3, 3);
+        }
+        #ngang{
+            width: 100%;
+            height: 30px;
+            background-color: rgb(242, 142, 149);
+            
+        }
+        #ngang ul li{
+            display: inline-block;
+        }
+        #ngang ul{
+            margin-left: 300px;
+        }
+        #ngang ul li a{
+            text-decoration: none;
+            color: rgb(20, 0, 0);
+            padding: 20px;
+        }
+        #ngang #search{
+            position: absolute;
+            top: 75px;
+            right: 300px
+
+        }
+        #ngang #go{
+            position: absolute;
+            top: 75px;
+            right: 260px
+        }
+        #doc{
+            width: 20%;
+            float: left;
+            background-color: white;   /* nền trắng bên trong */              
+            height: 600px;
+            padding: 0px;
+        }
+        #doc ul{
+            list-style: none;
+            margin: 0;        /* bỏ margin mặc định */
+            padding: 0;       /* bỏ padding mặc định */
+            width: 100%;      /* cho chắc ăn */
+        }
+        #doc ul li {
+            background-color: rgb(242, 142, 149);  
+            color: white;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;               /* luôn full chiều rộng khung */
+            box-sizing: border-box;    /* tính cả padding vào width */
+        }
+        #doc ul li:hover {
+            background-color: rgb(200, 100, 110);
+        }
+        #doc img{
+            width: 90%;                 /* chiếm 90% chiều rộng khung cha */
+            max-width: 300px;           /* không vượt quá 300px */
+            height: 100px;              /* chỉnh dẹp lại */
+            object-fit: cover;          /* cắt ảnh để không méo */
+            border-radius: 50% / 50%;  /* tạo oval ngang */
+            box-shadow: 10px 10px 40px pink;  /* viền bóng hồng */
+            display: block; /*cho tấm ảnh cách ra */
+            margin: 10px auto; 
+        }
+        aside {
+            width: 25%;
+            height: 550px;
+            background-color: black;
+            float: right;
+            margin-top: 10px;
+        }
+        aside h2{
+            color: white;
+        }
+        aside h3{
+            color: white;
+            padding: 10px;
+        }
+        aside img{
+            width: 90%;
+            height: 150px;
+            padding: 10px;
+        }
+        aside p{
+            color: white;
+            font-size: 12px;
+            padding: 10px;
+        }
+        aside a{
+            font-size: 14px;
+            color: lightblue;
+        }
+        
+        section h2{       
+            background-color: rgb(242,142,149);
+            color: rgb(230, 74, 74);
+            padding: 5px 30px;            
+            border-radius: 5px;
+            margin: 20px auto;
+            font-weight: bold;
+            letter-spacing: 15px;
+            text-align: center; /* chữ nằm giữa */
+            width: 400px;       /* đặt chiều rộng cố định để dễ căn */ 
+        }
+        section ul {
+            list-style-position: outside; /* để dấu chấm nằm ngoài */
+            padding-left: 250px;           /* số này sẽ đẩy cả chấm + chữ vào */
+            margin: 0;
+        }
+
+        footer{
+            clear: both;
+            width: 100%;
+            height: 100px;
+            background-color: rgb(242, 142, 149);
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            color: #faf6f6;
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="khung">
+        <header><i>EXAMPLE CAFE MENU</i></header>
+        <nav id="ngang">
+            <ul>
+                <li><a href="#">menu 1</a></li>
+                <li><a href="#">menu 2</a></li>
+                <li><a href="#">menu 3</a></li>
+            </ul>
+            <input type="search" name="search" id="search" >
+            <button type="submit" id="go">GO</button>
+        </nav>
+        <nav id="doc">
+            <ul>
+                <li>Cafe Latte</li>
+                <li>Capuchi</li>
+                <li>Ocean Blue</li>
+                <li>Ice-cream Cafe</li>
+                <li>Order online</li>
+            </ul>
+            <img src="./launch.png" alt="ảnh cafe" width="100%" height="250px">
+        </nav>
+        <aside>
+            <h2>Events</h2>
+            <div class="anh1">
+                
+                <h3>Regular Meetings</h3>
+                <img src="meeting.png" alt="ảnh metting">
+                <p>Host your regular team meetings or activities in the comfort of your own private room. <a href="#">Read more...</a></p>
+            </div>
+            <div class="anh2">
+                <h3>Product Launches</h3>
+                <img src="launch.png" alt="ảnh metting">
+                <p>Launch your product with ease in a space that truly fits its image. <a href="#">Read more...</a></p>
+            </div>
+        </aside>
+        <section>
+            <div class="starter">
+                <h2>Starters</h2>
+                <ul>
+                    <li>Chestnut and Mushroom Goujons</li>
+                    <li>Goat Cheese</li>
+                    <li>HONEY SOY CHICKEN KEBABS</li>
+                    <li>Seafood Salad</li>
+                </ul>
+            </div>
+            <div class="starter">
+                <h2>Desserts</h2>
+                <ul>
+                    <li>Lemon Sorbet</li>
+                    <li>Chocolate Mud Pie</li>
+                    <li>Pecan Pie</li>
+                    <li>Selection of fine Cheeses from Around the World</li>
+                </ul>
+            </div>
+            <div class="information">
+                <h2>Information</h2>
+                <table>
+                    <tr>
+                        <td><input type="text" placeholder="First name" /></td>
+                        <td><input type="text" placeholder="Last name" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="Email" /></td>
+                        <td><input type="text" placeholder="Telephone" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select>
+                                <option value="a">USA</option>
+                                <option value="a">UK</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="radio" /> Vietnamese
+                            <input type="radio" /> Foreigner
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea></textarea></td>
+                    </tr>
+                     <tr>
+                        <td colspan="2">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+        <footer>
+            <p><b> ABC Company &copy; - 12345678 - abccoffe@gmail.com</b>></p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
